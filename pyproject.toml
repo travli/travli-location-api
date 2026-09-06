@@ -1,0 +1,22 @@
+[project]
+name = "travli-location-api"
+version = "0.1.0"
+description = "Location and geocoding API for Tavli"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "httpx",
+    "pydantic-settings",
+    "redis",
+    "uvicorn[standard]"
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
